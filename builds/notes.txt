@@ -1,0 +1,2 @@
+don't forget that you must make the file executable
+chmod +x your filename.app/stbuild_template
