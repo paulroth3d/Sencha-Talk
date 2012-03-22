@@ -26,7 +26,7 @@ Ext.define("senchaTalk.view.Main", {
 		},{
 			title: 'Comtact Me',
 			iconCls: 'user',
-			xtype: 'contact.ContactMe'
+			xtype: 'ContactMe'
 		}]
 	}
 });

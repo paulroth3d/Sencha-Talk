@@ -4,11 +4,11 @@
 **/
 /*global Ext */
 
-Ext.define( 'senchaTalk.controller.ContactMe', {
+Ext.define( 'senchaTalk.controller.Contact', {
 	extend: 'Ext.app.Controller',
 	
 	config: {
-		views: [ 'contact.ContactMe' ]
+		views: [ 'ContactMe' ]
 	},
 	
 	init: function(){
