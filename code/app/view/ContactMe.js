@@ -9,14 +9,19 @@ Ext.define( 'senchaTalk.view.ContactMe', {
 	xtype: 'ContactMe',
 	id: 'ContactMeView',
 	requires: ['Ext.form.Panel'],
+	padding: 6,
 	
-	listners: {
-		handleReset: function( e ){
+	listeners: {
+		resetView: function( e ){
 			console.log( 'handleReset event captured' );
+			this.resetForm();
 		},
 		
 		initialize: function(){
-			console.log( 'ContactMe form has initialized' );
+			console.log( 'ContactMe form has initialized itself' );
+			
+			//-- initialize all the events that can be fired/listened for on this object
+			this.enableBubble([ 'contactSubmission', 'resetView' ]);
 		}
 	},
 	
@@ -54,35 +59,36 @@ Ext.define( 'senchaTalk.view.ContactMe', {
 			text: 'Submit',
 			handler: function( whichButton, e, listenerOptions ){
 				var panel = this.up( '#ContactMeView' );
-				panel.handleSubmit( whichButton,e,listenerOptions );
+				//panel.handleSubmit( whichButton,e,listenerOptions );
+				
+				var contactForm = panel.down( '#contactF' );
+				var values= contactForm.getValues();
+				
+				panel.fireEvent( 'contactSubmission', values );
 			}
 		},{
 			xtype: 'button',
 			text: 'Reset',
 			handler: function( whichButton, e, listenerOptions ){
 				var panel = this.up( '#ContactMeView' );
-				panel.handleReset( whichButton, e, listenerOptions );
+				
+				//-- it doesn't seem necessary to tell outside listeners that the form should be reset.
+				panel.resetForm();
 			}
+		},{
+			xtype: 'button',
+			text: 'Sample Button',
+			action: 'doSomethingCustom'
 		}]
-	},
-	
-	/**
-	 *  Handler for submission
-	 **/
-	handleSubmit: function( whichButton, e, listenerOptions ){
-		var contactForm = this.down( '#contactF' );
-		var values= contactForm.getValues();
-		
-		console.log( 'you have submitted the following values:' );
-		console.log( values );
 	},
 	
 	/**
 	 *  Handler if the reset button was pressed
 	**/
-	handleReset: function( whichButton, e, listenerOptions ){
+	resetForm: function(){
 		var contactForm = this.down( '#contactF' );
-		contactForm.reset();
-		console.log( 'view is aware of the reset button being pushed' );
+		if( contactForm ){
+			contactForm.reset();
+		}
 	}
 });

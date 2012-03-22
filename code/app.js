@@ -13,7 +13,7 @@ Ext.Loader.setPath({
 });
 //</debug>
 
-Ext.application({
+var senchaTalkApp = Ext.application({
     name: 'senchaTalk',
 
     requires: [
@@ -50,5 +50,28 @@ Ext.application({
                 window.location.reload();
             }
         );
+    },
+    
+	/**
+	 *  Custom method to show notification, but provide fallback if not on ios
+	 *  @param message
+	 *  @param callback
+	 *  @param title
+	**/
+    showNotification: function( message, callback, title ){
+    	if( callback == null ) callback = Ext.emptyFn;
+    	if( title == null ) title = '';
+    	
+    	if( navigator && navigator.notification && navigator.notification.alert ){
+			navigator.notification.alert(
+				message,			// message
+				callback,			// callback
+				title				// title
+				// 'Done'			// buttonName
+			)
+		} else {
+			alert( message );
+			callback();
+		}
     }
 });
