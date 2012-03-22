@@ -1,3 +1,12 @@
+/**
+ *  Main starting point for the application.
+ *  
+ *  This is where the views, models, controllers and profiles are stored.
+ *  
+ *  It is also a very good place to bounce events and or relate utility methods.
+**/
+/*global Ext */
+
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'sdk/src'
@@ -11,7 +20,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main','Home'],
+    views: ['Main','Home','ContactMe'],
 
     icon: {
         57: 'resources/icons/Icon.png',
