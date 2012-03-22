@@ -20,7 +20,9 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main','Home','ContactMe'],
+    views: ['Main','Home','ContactMe', 'LayoutExample', 'Docking'],
+    
+    controllers: [ 'ContactMe'],
 
     icon: {
         57: 'resources/icons/Icon.png',

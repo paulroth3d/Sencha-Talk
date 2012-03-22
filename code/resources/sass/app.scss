@@ -17,3 +17,27 @@
 @include sencha-msgbox;
 
 // Your custom code goes here...
+
+.panel1 { background-color: #DDD;
+	
+	.panel2 { background-color: #BBB;
+		
+		.panel3 { background-color: #999;
+		
+			.panel4 { background-color: #777;
+			
+				.panel5 { background-color: #555;
+				
+					.panel6 { background-color: #333; }
+				}
+			}
+		}
+	}
+}
+
+.panel1,
+.panel5 { border-bottom-left-radius: 1200px; }
+.panel2,
+.panel6 { border-bottom-right-radius: 1200px; }
+.panel3 { border-top-right-radius: 1200px; }
+.panel4 { border-top-left-radius: 1200px; }

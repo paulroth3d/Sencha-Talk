@@ -11,16 +11,22 @@ Ext.define("senchaTalk.view.Main", {
 	config: {
 		tabBarPosition: 'bottom',
 		
-		items: [
-			{
-				title: 'Welcome',
-				iconCls: 'home',
-				xtype: 'Home'
-			},{
-				title: 'Comtact Me',
-				iconCls: 'user',
-				xtype: 'ContactMe'
-			}
-		]
+		items: [{
+			title: 'Welcome',
+			iconCls: 'home',
+			xtype: 'Home'
+		},{
+			title: 'Layout',
+			iconCls: 'favorites',
+			xtype: 'LayoutExample'
+		},{
+			title: 'Spiral Dock',
+			iconCls: 'favorites',
+			xtype: 'Docking'
+		},{
+			title: 'Comtact Me',
+			iconCls: 'user',
+			xtype: 'ContactMe'
+		}]
 	}
 });
