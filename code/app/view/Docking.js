@@ -7,6 +7,7 @@
 Ext.define( 'senchaTalk.view.Docking', {
 	extend: 'Ext.Panel',
 	xtype: 'Docking',
+	padding: 10,
 	
 	config: {
 		fullscreen: true,
