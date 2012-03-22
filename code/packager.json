@@ -63,7 +63,7 @@
 	 *  - Android
 	 *  - AndroidEmulator
 	 */
-	"platform":"iOSSimulator",
+	"platform":"iOS",
 
 	/**
 	 * @cfg {String} deviceType
@@ -97,7 +97,7 @@
 	 *
 	 * When using a certificatePath on Windows, you do not need to specify this.
 	 */
-	"certificateAlias":"",
+	"certificateAlias":"iPhone Developer",
 	
 	/**
 	 * @cfg {String} sdkPath
