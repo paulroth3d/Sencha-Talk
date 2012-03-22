@@ -6,7 +6,7 @@
 
 Ext.define("senchaTalk.view.Main", {
 	extend: 'Ext.tab.Panel',
-	requires: ['Ext.TitleBar'],
+	requires: ['Ext.TitleBar', 'Ext.carousel.Carousel', 'Ext.form.FieldSet'],
 	
 	config: {
 		tabBarPosition: 'bottom',
@@ -26,7 +26,7 @@ Ext.define("senchaTalk.view.Main", {
 		},{
 			title: 'Comtact Me',
 			iconCls: 'user',
-			xtype: 'ContactMe'
+			xtype: 'contact.ContactMe'
 		}]
 	}
 });

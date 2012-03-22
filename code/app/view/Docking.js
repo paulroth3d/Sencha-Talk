@@ -17,34 +17,34 @@ Ext.define( 'senchaTalk.view.Docking', {
 			height: 210,
 			html: 'P1',
 			
-			dockedItems: [{
-				dock: 'right',
+			items: [{
+				docked: 'right',
 				width: 130,
 				height: 210,
 				cls: 'panel2',
 				html: 'P2',
 				
-				dockedItems: [{
-					dock: 'top',
+				items: [{
+					docked: 'top',
 					width: 130,
 					height: 80,
 					cls: 'panel3',
 					html: 'P3',
 					
-					dockedItems: [{
-						dock: 'left',
+					items: [{
+						docked: 'left',
 						width: 50,
 						height: 80,
 						cls: 'panel4',
 						
-						dockedItems: [{
-							dock: 'bottom',
+						items: [{
+							docked: 'bottom',
 							width: 50,
 							height: 30,
 							cls: 'panel5',
 							
-							dockedItems: [{
-								dock: 'right',
+							items: [{
+								docked: 'right',
 								width: 20,
 								height: 30,
 								cls: 'panel6'
