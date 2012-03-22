@@ -24,6 +24,10 @@ Ext.define("senchaTalk.view.Main", {
 			iconCls: 'favorites',
 			xtype: 'Docking'
 		},{
+			title: 'Template Demo',
+			iconCls: 'info',
+			xtype: 'TemplateDemo'
+		},{
 			title: 'Comtact Me',
 			iconCls: 'user',
 			xtype: 'ContactMe'

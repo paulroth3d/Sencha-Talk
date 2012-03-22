@@ -20,7 +20,7 @@ var senchaTalkApp = Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main','Home','ContactMe', 'LayoutExample', 'Docking'],
+    views: ['Main','Home','ContactMe', 'LayoutExample', 'Docking', 'TemplateDemo' ],
     
     controllers: [ 'Contact'],
 
